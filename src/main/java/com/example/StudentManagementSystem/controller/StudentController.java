@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.repository.StudentRepository;
-@CrossOrigin(origins="https://campusfusion.netlify.app/",allowedHeaders="*")
+@CrossOrigin(origins="https://campusfusion.netlify.app/",allowedHeaders="*", allowCredentials="true", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 @RestController
 public class StudentController {
 	
