@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.repository.StudentRepository;
-@CrossOrigin("*")
+@CrossOrigin("https://campusfusion.netlify.app/")
 @RestController
 public class StudentController {
 	
