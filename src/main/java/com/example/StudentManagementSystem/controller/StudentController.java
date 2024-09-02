@@ -1,4 +1,5 @@
 package com.example.StudentManagementSystem.controller;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.repository.StudentRepository;
-@CrossOrigin(origins ="https://campusfusion.netlify.app/")
+
+@CrossOrigin(origins ="https://campusfusion.netlify.app/" , allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 @RestController
 public class StudentController {
 	
